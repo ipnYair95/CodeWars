@@ -9,6 +9,13 @@ Notes
 
 Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input! */
 
+/**
+ * Level: Intermedio
+ * 1- Normalizamos los caracteres para tomar en cuenta lower y upper
+ * 2- Recorremos cada posicion, donde se emplean 2 strings para saber si se repite o no por la izq y derecha sin contar el actual
+ *     --Si nos encontramos en la posicion inicial o final retornamos '' --
+ * 3- Si no existe otra letra pasa a ) de lo contrario (
+ */
 
 export function duplicateEncode(word: string) {
     

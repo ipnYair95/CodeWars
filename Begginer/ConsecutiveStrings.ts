@@ -19,6 +19,14 @@ In the same way:
 longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
 n being the length of the string array, if n = 0 or k > n or k <= 0 return "". */
 
+/**
+ * Level: Intermedio
+ * 1- Validamos que el array no sea vacio, k no negativo y que k no supere la longitud del array
+ * 2- A cada palabra le concatenamos la siguiente palabra en funcion de k empleado un for
+ * 3- Dicha palabra compuesta la agregamos a un array que tiene la cadena y su longitud
+ * 4- Buscamos el de mayor longitud
+ * 5- Para validar quien llego primero, recorremos el array buscando el primer match para retornar dicho indice
+ */
 
 class Mixes {
     constructor(

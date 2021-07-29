@@ -8,6 +8,15 @@ spinWords("Hey fellow warriors") => "Hey wollef sroirraw"
 spinWords("This is a test") => "This is a test" 
 spinWords("This is another test") => "This is rehtona test" */
 
+/**
+ * Level: easy
+ * 1- Convertirmos las palabras en array para trabajarlas
+ * 2- Recorremos el array y buscamos aquellas palabras que sea mayores a 5
+ *      -> Mayores: Dividimos la palabra en array para aplicarle reverse y pposteriormente juntarlas
+ *      -> Menores: Agregamos a la cadena directamente
+ * 3- Obtenido el array creamos la oracion final con join
+ */
+
 export class Kata {
     static spinWords(words: string) {
 

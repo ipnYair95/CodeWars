@@ -27,6 +27,16 @@ In that case the returned structure of C will have its sz component equal to 0.
 Return the string "nil" with Bash, PowerShell, Pascal and Fortran. */
 
 
+/**
+ * Level: Intermedio
+ * 1- Si l == w retornamos null 
+ * 2- Empleamos el area para saber cuanto espacio nos queda disponible
+ * 3- Buscamos el menor de los lados para usarlo como 1 primer cuadro
+ * 4- Restamos el areaTotal - areaCuadrado, del minimo valor seleccionado
+ * 5- Buscamos un valor tal que min * x = areaRestante
+ * 6- Repetimos hasta quedarnos sin area disponible.
+ */
+
 export class G964 {
 
     public static sqInRect(l: number, w: number): number[] {

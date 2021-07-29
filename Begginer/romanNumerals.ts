@@ -18,7 +18,14 @@ M          1,000
 Remember that there can't be more than 3 identical symbols in a row. */
 
 /**
- * 1425 MCDXXV
+ * Level: Hard
+ * 1- Creamos nuestros simbolos y equivalencias
+ * 2- Usamos un regex para validar que nos den un numero y que si es numero se encuentre entre el rango (1,4000)
+ * 3- Recorremos la cadena validando cada caracter empezando por el simbolo mayor M
+ * -> Si el valor actual/simbolo > 1, puede dividirse y usarse, empleamos repeat para repetir las veces necesarias
+ *      en funcion del resultado de la division
+ *      Una vez realizado, empleamos modulo para obtener el residuo y repetir
+ * -> Si el valor no puede dividirse, pasamos al siguiente simbolo y repetimos
  */
 
 class Simbolo {

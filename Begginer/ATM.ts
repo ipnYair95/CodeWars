@@ -7,6 +7,10 @@ Examples
 "12345"  -->  false
 "a234"   -->  false */
 
+/**
+ * Level: easy;
+ * Validamos el pin con una expresion regular que valide solamente 4 y 6 digitos
+ */
 
 export class Kata {
     static validatePin(pin: string): boolean {

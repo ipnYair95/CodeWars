@@ -14,6 +14,13 @@ SeriesSum(1) => 1 = "1.00"
 SeriesSum(2) => 1 + 1/4 = "1.25"
 SeriesSum(5) => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57" */
 
+/**
+ *Level: easy
+ *1- Revisamos que si es 1 o 0 mandamos directamente el resultado
+ *2- De lo contrario empleamos den=4 y en funcion de las repeticiones se va incrementando +3, del mismo modo
+    vamos sumando la fraccion a la suma
+ */
+ 
 
 export function SeriesSum(n: number): string {
     let den = 4;
