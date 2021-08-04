@@ -26,12 +26,59 @@ Note:
 In the result codes and their values are in the same order as in M.
  */
 
+/**
+ * Level: Easy
+ * 1- Verificamos q ambos arrays tengan algo, de lo contrario no se puede calcular
+ * 2- Recorrermos las categorias y por cada categoria recorremos los libros
+ * 3- Empleamos el primer caracter y si corresponde, se le suma su valor
+ */
 
-function filtro(  articulos: string[], categorias: string[]  ) {
+class Categoria {
+    private _code;
+    private _val;
+
+    constructor(code: string, val: number) {
+        this._code = code;
+        this._val = val;
+    }
+
+    get code(): string {
+        return this._code;
+    }
+
+    get val(): number {
+        return this._val;
+    }
+
+    set code(code) {
+        this._code = code;
+    }
+    set val(val) {
+        this._val = val;
+    }
+}
+
+function filtro(listOfArt: string[], listOfCat: string[]) {
     
-    articulos.forEach( (a)=>{
-        console.log( a );
-    });
+    let res: Categoria[] = [];
+    let str = '';
+
+    if (listOfCat.length == 0 || listOfArt.length == 0) {
+        return "";
+    }
+
+    for (let i = 0; i < listOfCat.length; i++) {
+        res.push(new Categoria(listOfCat[i], 0));
+        listOfArt.forEach((l: string) => {
+            let code = l.split(" ")[0];
+            let val = l.split(" ")[1];
+            res[i].val += (code.charAt(0) === res[i].code) ? +val : 0;
+        });
+        str += `(${res[i].code} : ${res[i].val})` + ((i < listOfCat.length - 1) ? ' - ' : '');
+
+    };
+
+    return str;
 
 }
 
@@ -39,4 +86,4 @@ function filtro(  articulos: string[], categorias: string[]  ) {
 let b = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"];
 let c = ["A", "B", "C", "D"];
 
-filtro( b,c );
+console.log(filtro(b, c));
